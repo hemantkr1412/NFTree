@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#contact {
+    /* border: 2px solid red; */
+    height: 6rem;
+    /* background: #F1F6FA; */
+}
+
+.contactDiv {
+    /* border: 2px solid red; */
+    padding: 1rem 4rem 4rem 4rem !important;
+}
+
+.contactInfo {
+    font-weight: bold;
+}
+
+.contactLink {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.formOuterDiv {
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+}
+
+.formDiv {
+    /* border: 2px solid red; */
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background: white;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.inputDiv {
+    margin: 0.5rem 1rem 1rem 2.5rem !important;
+}
+
+.inputLabel {
+    color: #9497A1;
+}
+
+.formBtn {
+    width: 6rem;
+    background: var(--primary) !important;
+    color: white !important;
+    float: right;
+    /* margin-left: auto !important; */
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width : 600px) {
+    #contactHead {
+        font-size: 1.6rem;
+    }
+
+    #contactContainer {
+        padding: 0 !important;
+    }
+
+    .formDiv {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+    .contactDiv {
+        padding: 4rem 1rem 6rem 3rem !important;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .formDiv {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 900px) {
+    .contactDiv {
+        padding: 4rem 2rem 4rem 4rem !important;
+    }
+
+    .formDiv {
+        width: 90%;
+    }
+}

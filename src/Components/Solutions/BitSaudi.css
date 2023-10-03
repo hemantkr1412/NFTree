@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.solutionImgContainer {
+    height: 20rem;
+}
+
+.solutionImg {
+    height: 100%;
+}
+
+.launchBtn {
+    background: var(--primary) !important;
+    text-decoration: none;
+    color: white;
+    padding: 1rem 3rem !important;
+    font-size: 1rem !important;
+    text-transform: none !important;
+    font-weight: bold !important;
+    border-radius: 3rem !important;
+}
+
+#bitsaudi {
+    /* background-color: red; */
+    height: 3rem;
+}
+
+#bitwallet {
+    /* background-color: red; */
+    height: 10rem;
+    margin-top: -5rem;
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width : 600px) {
+    .solutionHead {
+        font-size: 2.3rem !important;
+        margin: 0 !important;
+    }
+
+    .solution {
+        font-size: 2rem;
+    }
+
+    #bitsaudi,
+    #bitwallet {
+        height: 2rem;
+    }
+
+    .solutionInfo {
+        margin-bottom: 2rem !important;
+    }
+
+    .launchBtn {
+        display: block;
+        margin: auto;
+        width: 40%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .launchBtn {
+        width: 56%;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .solutionImgContainer {
+        height: 20rem;
+        margin: 0 2rem;
+    }
+
+    /* .solutionImg {
+        object-fit: contain !important;
+    } */
+
+    .solutionHead {
+        margin-bottom: 4rem !important;
+        margin-top: 1rem !important;
+    }
+
+    .solution {
+        font-size: 1.5rem !important;
+    }
+
+    #bitwallet {
+        height: 4rem;
+        margin-top: 0rem !important;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 768px) {
+    .solutionImgContainer {
+        height: 22rem;
+        margin-left: 2rem;
+    }
+
+    .solutionHead {
+        font-size: 2.4rem !important;
+        margin-top: 1rem !important;
+    }
+
+    .solution {
+        font-size: 1.8rem !important;
+    }
+
+    .solutionInfo {
+        margin-bottom: 2rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* #bitwallet {
+        margin-top: 0;
+    } */
+}
+
+@media only screen and (min-width : 768px) and (max-width : 900px) {
+    .solutionImgContainer {
+        margin-left: 2rem;
+    }
+
+    .solutionHead {
+        font-size: 2.4rem !important;
+        margin-top: 1rem !important;
+    }
+
+    .solution {
+        font-size: 1.8rem !important;
+    }
+
+    .solutionInfo {
+        margin-bottom: 2rem !important;
+    }
+
+    #bitwallet {
+        margin-top: -8rem !important;
+    }
+}
+
+@media only screen and (min-width : 900px) and (max-width : 1200px) {
+    .solutionHead {
+        font-size: 2.3rem !important;
+        margin-top: 1rem !important;
+    }
+
+    .solutionInfo {
+        margin-bottom: 2rem !important;
+    }
+
+    .solution {
+        font-size: 2rem !important;
+    }
+
+    #bitwallet {
+        height: 7rem;
+        margin-top: -7rem !important;
+    }
+}
