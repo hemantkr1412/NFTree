@@ -10,8 +10,8 @@ import ListItem from "@mui/material/ListItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import logo1 from "/NFTree.png";
-import logo2 from "/NFTree.png";
+import logo from "/logo.png";
+// import logo2 from "/logo2.png";
 import "../Navbar/Navbar.css";
 import Dropdown from "./Dropdown";
 import Button from "@mui/material/Button";
@@ -26,11 +26,12 @@ import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 const drawerWidth = 240;
 
-export default function Navbar({lang,setLang}) {
+export default function Navbar({ lang, setLang }) {
 	const { t } = useTranslation();
 	const navItems = [
 		{ label: t("navbar.home"), key: "Home" },
 		{ label: t("navbar.about"), key: "About" },
+		{ label: t("navbar.solutions"), key: "Solutions" },
 		{ label: t("navbar.contact"), key: "Contact" },
 	];
 	const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -47,18 +48,14 @@ export default function Navbar({lang,setLang}) {
 		if (isMouseEnter) setIsMouseEnter(false);
 	};
 
-	const handleMouseEnter = () => {
-		// console.log(`mouse enters`);
-		setIsMouseEnter(true);
-	};
+	const handleMouseEnter = () => setIsMouseEnter(true);
+	
 	const handleMouseLeave = () => {
-		// console.log(`mouse leaves`);
 		setIsMouseEnter(false);
 		setMobileOpen(false);
 	};
 
 	const handleSidebarClick = (event) => {
-		// console.log(event.target);
 		const clickedElement = event.target;
 		if (!clickedElement.classList.contains("solutionLink")) {
 			setIsMouseEnter(false);
@@ -74,7 +71,7 @@ export default function Navbar({lang,setLang}) {
 			id="sidebar">
 			<Typography variant="h6" sx={{ my: 2 }}>
 				<img
-					src={logo1}
+					src={logo}
 					alt=""
 					style={{
 						height: "5rem",
@@ -151,7 +148,7 @@ export default function Navbar({lang,setLang}) {
 							sx={{
 								mr: 2,
 								display: { sm: "none" },
-								color: "black",
+								color: "white",
 							}}>
 							<MenuIcon />
 						</IconButton>
@@ -173,17 +170,18 @@ export default function Navbar({lang,setLang}) {
 								className="navbarTitle">
 								<a href="#home">
 									<img
-										src={logo2}
+										src={logo}
 										alt=""
 										style={{
-											height: "3rem",
+											height: "4rem",
+											width:'100%',
 											marginTop: ".5rem",
 										}}
 										id="navbarLogo"
 									/>
 								</a>
 							</Typography>
-							{/* <Box
+							<Box
 								xs={6}
 								sx={{
 									// border: '2px solid red',
@@ -192,64 +190,28 @@ export default function Navbar({lang,setLang}) {
 								}}>
 								<Box
 									sx={{
-										width: "25%",
+										width: "100%",
 										display: "flex",
-										justifyContent: "space-between",
-										marginLeft:"42rem",
-										
+										justifyContent: "space-evenly",
+										alignItems: "center",
 									}}>
 									{navItems.map((item) => (
 										<div
 											key={item.key}
 											style={{
-												
 												display: "flex",
 												alignItems: "center",
 											}}>
-											{item.key === "Solutions" ? (
-												<>
-													<div
-														onMouseOver={
-															handleMouseEnter
-														}
-														onMouseOut={
-															handleMouseLeave
-														}
-														style={{
-															height: "2rem",
-															display: "flex",
-															alignItems:
-																"center",
-															
-														}}>
-														<a className="solutionLink">
-															{item.label}
-														</a>
-														{isMouseEnter && (
-															<Dropdown
-																handleMouseLeave={
-																	handleMouseLeave
-																}
-																setMobileOpen={
-																	setMobileOpen
-																}
-															/>
-														)}
-														
-													</div>
-												</>
-											) : (
 												<a
 													href={`#${item.key.toLowerCase()}`}
 													className="navbarLinks"
-													style={{ color: scroll ? "black" : "white"}}>
+													>
 													{item.label}
 												</a>
-											)}
 										</div>
 									))}
 								</Box>
-							</Box> */}
+							</Box>
 						</Box>
 						{/* <LanguageSelect lang={lang} setLang={setLang} /> */}
 					</Toolbar>
@@ -277,115 +239,111 @@ export default function Navbar({lang,setLang}) {
 		</>
 	);
 }
+// function LanguageSelect({ lang, setLang }) {
+// 	const [open, setOpen] = React.useState(false);
+// 	const anchorRef = React.useRef(null);
 
+// 	const handleLanguageChange = (event, value) => {
+// 		i18next.changeLanguage(value);
+// 		setLang(value);
+// 		handleClose(event);
+// 	};
+// 	const handleToggle = () => {
+// 		setOpen((prevOpen) => !prevOpen);
+// 	};
 
-function LanguageSelect({lang,setLang}) {
-	const [open, setOpen] = React.useState(false);
-	const anchorRef = React.useRef(null);
-	// const [lang, setLang] = useState(i18next.language);
+// 	const handleClose = (event) => {
+// 		if (anchorRef.current && anchorRef.current.contains(event.target)) {
+// 			return;
+// 		}
 
-	const handleLanguageChange = (event, value) => {
-		i18next.changeLanguage(value);
-		setLang(value);
-		handleClose(event);
-	};
-	const handleToggle = () => {
-		setOpen((prevOpen) => !prevOpen);
-	};
+// 		setOpen(false);
+// 	};
 
-	const handleClose = (event) => {
-		if (anchorRef.current && anchorRef.current.contains(event.target)) {
-			return;
-		}
+// 	function handleListKeyDown(event) {
+// 		if (event.key === "Tab") {
+// 			event.preventDefault();
+// 			setOpen(false);
+// 		} else if (event.key === "Escape") {
+// 			setOpen(false);
+// 		}
+// 	}
 
-		setOpen(false);
-	};
+// 	const prevOpen = React.useRef(open);
+// 	React.useEffect(() => {
+// 		if (prevOpen.current === true && open === false) {
+// 			anchorRef.current.focus();
+// 		}
 
-	function handleListKeyDown(event) {
-		if (event.key === "Tab") {
-			event.preventDefault();
-			setOpen(false);
-		} else if (event.key === "Escape") {
-			setOpen(false);
-		}
-	}
+// 		prevOpen.current = open;
+// 	}, [open]);
 
-	// return focus to the button when we transitioned from !open -> open
-	const prevOpen = React.useRef(open);
-	React.useEffect(() => {
-		if (prevOpen.current === true && open === false) {
-			anchorRef.current.focus();
-		}
-
-		prevOpen.current = open;
-	}, [open]);
-
-	return (
-		<Stack direction="row" spacing={2}>
-			<div>
-				<Button
-					ref={anchorRef}
-					id="composition-button"
-					aria-controls={open ? "composition-menu" : undefined}
-					aria-expanded={open ? "true" : undefined}
-					aria-haspopup="true"
-					onClick={handleToggle}>
-					<svg
-						className="language-select"
-						stroke="black"
-						fill="black"
-						strokeWidth="0"
-						viewBox="0 0 24 24"
-						height="24"
-						width="24"
-						xmlns="http://www.w3.org/2000/svg">
-						<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm7.931 9h-2.764a14.67 14.67 0 0 0-1.792-6.243A8.013 8.013 0 0 1 19.931 11zM12.53 4.027c1.035 1.364 2.427 3.78 2.627 6.973H9.03c.139-2.596.994-5.028 2.451-6.974.172-.01.344-.026.519-.026.179 0 .354.016.53.027zm-3.842.7C7.704 6.618 7.136 8.762 7.03 11H4.069a8.013 8.013 0 0 1 4.619-6.273zM4.069 13h2.974c.136 2.379.665 4.478 1.556 6.23A8.01 8.01 0 0 1 4.069 13zm7.381 6.973C10.049 18.275 9.222 15.896 9.041 13h6.113c-.208 2.773-1.117 5.196-2.603 6.972-.182.012-.364.028-.551.028-.186 0-.367-.016-.55-.027zm4.011-.772c.955-1.794 1.538-3.901 1.691-6.201h2.778a8.005 8.005 0 0 1-4.469 6.201z"></path>
-					</svg>
-				</Button>
-				<Popper
-					open={open}
-					anchorEl={anchorRef.current}
-					role={undefined}
-					placement="bottom-start"
-					transition
-					disablePortal>
-					{({ TransitionProps, placement }) => (
-						<Grow
-							{...TransitionProps}
-							style={{
-								transformOrigin:
-									placement === "bottom-start"
-										? "left top"
-										: "left bottom",
-							}}>
-							<Paper>
-								<ClickAwayListener onClickAway={handleClose}>
-									<MenuList
-										autoFocusItem={open}
-										id="composition-menu"
-										aria-labelledby="composition-button"
-										onKeyDown={handleListKeyDown}>
-										<MenuItem
-											onClick={(e) =>
-												handleLanguageChange(e, "ar")
-											}
-											value={"ar"}>
-											العربية
-										</MenuItem>
-										<MenuItem
-											onClick={(e) =>
-												handleLanguageChange(e, "en")
-											}
-											value={"en"}>
-											English
-										</MenuItem>
-									</MenuList>
-								</ClickAwayListener>
-							</Paper>
-						</Grow>
-					)}
-				</Popper>
-			</div>
-		</Stack>
-	);
-}
+// 	return (
+// 		<Stack direction="row" spacing={2}>
+// 			<div>
+// 				<Button
+// 					ref={anchorRef}
+// 					id="composition-button"
+// 					aria-controls={open ? "composition-menu" : undefined}
+// 					aria-expanded={open ? "true" : undefined}
+// 					aria-haspopup="true"
+// 					onClick={handleToggle}>
+// 					<svg
+// 						className="language-select"
+// 						stroke="white"
+// 						fill="white"
+// 						strokeWidth="0"
+// 						viewBox="0 0 24 24"
+// 						height="24"
+// 						width="24"
+// 						xmlns="http://www.w3.org/2000/svg">
+// 						<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm7.931 9h-2.764a14.67 14.67 0 0 0-1.792-6.243A8.013 8.013 0 0 1 19.931 11zM12.53 4.027c1.035 1.364 2.427 3.78 2.627 6.973H9.03c.139-2.596.994-5.028 2.451-6.974.172-.01.344-.026.519-.026.179 0 .354.016.53.027zm-3.842.7C7.704 6.618 7.136 8.762 7.03 11H4.069a8.013 8.013 0 0 1 4.619-6.273zM4.069 13h2.974c.136 2.379.665 4.478 1.556 6.23A8.01 8.01 0 0 1 4.069 13zm7.381 6.973C10.049 18.275 9.222 15.896 9.041 13h6.113c-.208 2.773-1.117 5.196-2.603 6.972-.182.012-.364.028-.551.028-.186 0-.367-.016-.55-.027zm4.011-.772c.955-1.794 1.538-3.901 1.691-6.201h2.778a8.005 8.005 0 0 1-4.469 6.201z"></path>
+// 					</svg>
+// 				</Button>
+// 				<Popper
+// 					open={open}
+// 					anchorEl={anchorRef.current}
+// 					role={undefined}
+// 					placement="bottom-start"
+// 					transition
+// 					disablePortal>
+// 					{({ TransitionProps, placement }) => (
+// 						<Grow
+// 							{...TransitionProps}
+// 							style={{
+// 								transformOrigin:
+// 									placement === "bottom-start"
+// 										? "left top"
+// 										: "left bottom",
+// 							}}>
+// 							<Paper>
+// 								<ClickAwayListener onClickAway={handleClose}>
+// 									<MenuList
+// 										autoFocusItem={open}
+// 										id="composition-menu"
+// 										aria-labelledby="composition-button"
+// 										onKeyDown={handleListKeyDown}>
+// 										<MenuItem
+// 											onClick={(e) =>
+// 												handleLanguageChange(e, "ar")
+// 											}
+// 											value={"ar"}>
+// 											العربية
+// 										</MenuItem>
+// 										<MenuItem
+// 											onClick={(e) =>
+// 												handleLanguageChange(e, "en")
+// 											}
+// 											value={"en"}>
+// 											English
+// 										</MenuItem>
+// 									</MenuList>
+// 								</ClickAwayListener>
+// 							</Paper>
+// 						</Grow>
+// 					)}
+// 				</Popper>
+// 			</div>
+// 		</Stack>
+// 	);
+// }

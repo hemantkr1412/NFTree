@@ -2,14 +2,7 @@
 	"navbar": {
 		"home": "Home",
 		"about": "About",
-		"solutions": {
-			"heading": "Solutions",
-			"bitsaudi": "Bitsaudi",
-			"bitwallet": "Bitwallet",
-			"gaming": "Metaverse/Gaming",
-			"itservices": "IT Services"
-		},
-		"team": "Team",
+		"solutions": "Solutions",
 		"contact": "Contact"
 	},
 	"mainHeading": "Aba'ad Alkhayal",

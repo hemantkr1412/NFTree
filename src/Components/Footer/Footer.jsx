@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import logo from "/NFTree.png";
+import logo from "/logo.png";
 import Box from "@mui/material/Box";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -20,7 +20,7 @@ const Footer = () => {
 						src={logo}
 						alt=""
 						style={{
-							height: "5rem",
+							height: "4rem",
 							marginTop: ".5rem",
 						}}
 						id="footerImg"

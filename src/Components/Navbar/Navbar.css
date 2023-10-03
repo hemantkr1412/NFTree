@@ -21,21 +21,20 @@
 
 .navbarLinks {
     text-decoration: none !important;
-    /* margin: 1rem; */
+    color: var(--primary);
+    font-weight:500;
 }
 
-.navbarLinks:hover,
-.solutionLink:hover {
+.navbarLinks:hover {
     color: var(--primary) !important;
-    /* text-decoration: underline; */
 }
 
-.solutionLink {
+/* .solutionLink {
     cursor: default;
     text-decoration: none;
-    color: white;
+    color: var(--primary);
     margin: auto;
-}
+} */
 
 .dropdownLinks {
     text-decoration: none;

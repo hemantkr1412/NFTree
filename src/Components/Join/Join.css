@@ -1,0 +1,7 @@
+.impactDiv ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.1rem;
+    padding: 1rem;
+}

@@ -19,22 +19,12 @@
     height: 20rem;
     display: flex;
     justify-content: flex-end;
-}
-
-.missionImg,
-.aboutImg {
-    /* border: 2px solid red;  */
-    /* height: 80%; */
+    float:right;
 }
 
 .mission {
     margin-top: 2rem !important;
 }
-
-
-
-
-  
 
 /* MEDIA QUERY */
 

@@ -52,13 +52,11 @@ const Contact = () => {
 	const inputEvent = (e) => {
 		const name = e.target.name;
 		const val = e.target.value;
-		// console.log(name, val);
 		setInputDetails({ ...inputDetails, [name]: val });
 	};
 
 	const submitForm = (event) => {
 		event.preventDefault();
-		// console.log(`submit forms runs`);
 
 		const config = {
 			SecureToken: "26802cb0-6999-4fb5-8d33-b75d9d1c7736",
@@ -75,7 +73,6 @@ const Contact = () => {
 		if (window.Email) {
 			window.Email.send(config)
 				.then((data) => {
-					// console.log(data);
 					setOpen(true);
 					setInputDetails({
 						Name: "",

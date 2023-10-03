@@ -5,12 +5,11 @@ import Box from "@mui/material/Box";
 import { Card, CardMedia } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import aboutImg1 from "./assets/15.png";
-import aboutImg2 from "./assets/about2.png";
+import about from "./assets/about.png";
 import "./About.css";
 import { useTranslation } from "react-i18next";
 
-const About = ({lang}) => {
+const About = ({ lang }) => {
 	const { t } = useTranslation();
 	useEffect(() => {
 		AOS.init({
@@ -37,7 +36,6 @@ const About = ({lang}) => {
 					md={1}
 					lg={2}
 					sx={{ display: { xs: "none", md: "block" } }}></Grid>
-
 				<Grid
 					item
 					xs={12}
@@ -72,7 +70,7 @@ const About = ({lang}) => {
 							sx={{
 								objectFit: "contain",
 							}}
-							image={aboutImg1}
+							image={about}
 							// sx={{ objectFit: "cover"}} 
 							alt="Image Alt Text"
 							className="aboutImg"
@@ -116,7 +114,7 @@ const About = ({lang}) => {
 					xs={12}
 					sm={6}
 					md={5}
-					lg={5}
+					lg={4}
 					className="imgContainer"
 					sx={{
 						// border: '2px solid red',
@@ -129,8 +127,8 @@ const About = ({lang}) => {
 						<CardMedia
 							component="img"
 							// height="80%"
-							image={aboutImg1}
-							sx={{ objectFit: "contain"}}
+							image={about}
+							sx={{ objectFit: "contain" }}
 							alt="Image Alt Text"
 							className="aboutImg"
 						/>
@@ -146,94 +144,57 @@ const About = ({lang}) => {
 					sx={{ display: { xs: "none", md: "block" } }}></Grid>
 			</Grid>
 
-			{/* MISSION SECTION */}
-
-			{/* <Grid
+			<Grid
 				container
 				spacing={{ xs: 3, md: 3 }}
-				justifyContent="center"
-				className="mission"
-			>
+				justifyContent="center">
 				<Grid
 					item
-					xs={12}
-					sm={2}
-					md={1}
-					lg={2}
-					sx={{ display: { xs: "none", md: "block" } }}></Grid>
-
+					xs={2}
+					sx={{ display: { xs: "none", lg: "block" } }}></Grid>
 				<Grid
 					item
+					container
 					xs={12}
-					sm={6}
-					md={5}
-					lg={4}
-					className="imgContainer">
-					<Typography
-						variant="h3"
-						gutterBottom
-						sx={{
-							fontWeight: "bold",
-							mb: 4,
-							display: { xs: "block", sm: "none" },
-							textAlign: "center",
-							color: "black",
-						}}
-						className="aboutHead">
-						{t("ourMission.heading")}
-					</Typography>
-					<Card
-						sx={{ boxShadow: "none" }}
-						data-aos="fade-up"
-						className="missionImgContainer">
-						<CardMedia
-							component="img"
-							// height="80%"
-							image={aboutImg2}
-							sx={{ objectFit: "cover" }}
-							alt="Image Alt Text"
-							className="missionImg"
-						/>
-					</Card>
-				</Grid>
-
-				<Grid item xs={12} sm={6} md={5} lg={4}>
-					<Box sx={{ textAlign: "start" }} className="missionBox">
-						<Typography
-							variant="h3"
-							gutterBottom
-							sx={{
-								fontWeight: "bold",
-								mb: 4,
-								display: { xs: "none", sm: "block" },
-								color: "black",
-								textAlign: lang === "en" ? "justify" : "right",
-							}}
-							className="aboutHead">
-							{t("ourMission.heading")}
+					lg={8}
+					spacing={3}
+					className="impactDiv">
+					<Grid item xs={4} spacing={8}>
+						<Typography variant="h4" gutterBottom>
+							Environmental Impact
 						</Typography>
-						<Typography
-							sx={{
-								typography: "body1",
-								lineHeight: 1.8,
-								textAlign: lang === "en" ? "justify" : "right",
-								marginLeft: "0",
-								color: "black",
-							}}
-							gutterBottom
-							id="aboutInfo">
-							{t("ourMission.text")}
+						<ul >
+							<li>Reducing carbon footprint</li>
+							<li>Creating a sustainable forest ecosystem</li>
+							<li>Restoring natural habitats</li>
+						</ul>
+					</Grid>
+					<Grid item xs={4} spacing={8}>
+						<Typography variant="h4" gutterBottom>
+							Social Impact
 						</Typography>
-					</Box>
+						<ul>
+							<li>Creating job opportunities in rural areas</li>
+							<li>Encouraging environmental consciousness</li>
+							<li>Fostering a sense of community</li>
+						</ul>
+					</Grid>
+					<Grid item xs={4} spacing={8}>
+						<Typography variant="h4" gutterBottom>
+							Economic Impact
+						</Typography>
+						<ul>
+							<li>Providing investment opportunities</li>
+							<li>Contributing to sustainable development</li>
+							<li>Creating a source of income for the farmers</li>
+						</ul>
+					</Grid>
 				</Grid>
 				<Grid
 					item
-					xs={12}
-					sm={2}
-					md={1}
-					lg={2}
-					sx={{ display: { xs: "none", md: "block" } }}></Grid>
-			</Grid> */}
+					xs={2}
+					sx={{ display: { xs: "none", lg: "block" } }}></Grid>
+			</Grid>
 		</>
 	);
 };
