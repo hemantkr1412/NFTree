@@ -14,24 +14,22 @@ import { Snackbar } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import CancelIcon from "@mui/icons-material/Cancel";
 import "./Contact.css";
-import { useTranslation } from "react-i18next";
 
 const Contact = () => {
-	const { t } = useTranslation();
 	const formDetail = [
 		{
-			label: t("contact.name"),
-			placeholder: t("contact.namePlaceholder"),
+			label: "Name",
+			placeholder: "Andrea",
 			key: "Name",
 		},
 		{
-			label: t("contact.email"),
-			placeholder: t("contact.emailPlaceholder"),
+			label: "Email",
+			placeholder: "andrea@gmail.com",
 			key: "Email",
 		},
 		{
-			label: t("contact.message"),
-			placeholder: t("contact.messagePlaceholder"),
+			label: "Message",
+			placeholder: "Your message",
 			key: "Message",
 		},
 	];
@@ -126,7 +124,7 @@ const Contact = () => {
 					fontSize: "2rem",
 				}}
 				id="contactHead">
-				{t("contact.heading")}
+				Feel Free to reach out for further details
 			</Typography>
 			<Grid
 				container
@@ -147,11 +145,11 @@ const Contact = () => {
 								fontWeight: "bold",
 								display: { xs: "none", md: "block" },
 							}}>
-							{t("contact.heading")}
+							Feel Free to reach out for further details
 						</Typography>
 
 						<Box sx={{ mt: 4 }}>
-							<p>{t("contact.emailAddress")}</p>
+							<p>Email Address</p>
 							<a
 								href="mailto: sales@abaadalkhayal.com"
 								className="contactLink">
@@ -159,7 +157,7 @@ const Contact = () => {
 							</a>
 						</Box>
 						<Box sx={{ mt: 4 }}>
-							<p>{t("contact.addressHeading")}</p>
+							<p>Address</p>
 							<p className="contactInfo">
 								B-8  First Floor, Multan Nagar Paschim Vihar Delhi,
 								North West DL-110063
@@ -175,7 +173,7 @@ const Contact = () => {
 					lg={4}
 					className="formOuterDiv">
 					<Box component="div" className="formDiv" >
-					{/* data-aos={dataAos} */}
+						{/* data-aos={dataAos} */}
 						<Typography
 							variant="h5"
 							gutterBottom
@@ -185,7 +183,7 @@ const Contact = () => {
 								marginTop: "1rem",
 								color: "black",
 							}}>
-							{t("contact.contactUs")}
+							Contact Us
 						</Typography>
 						<form onSubmit={submitForm}>
 							{formDetail.map((elem, id) => {
@@ -203,15 +201,15 @@ const Contact = () => {
 											className="inputLabel">
 											{elem.label}
 										</InputLabel>
-									
-											<Input
-												id="component-simple"
-												placeholder={elem.placeholder}
-												className="input"
-												onChange={inputEvent}
-												name={elem.label}
-												value={inputDetails[elem.key]}
-											/>
+
+										<Input
+											id="component-simple"
+											placeholder={elem.placeholder}
+											className="input"
+											onChange={inputEvent}
+											name={elem.label}
+											value={inputDetails[elem.key]}
+										/>
 									</FormControl>
 								);
 							})}
@@ -220,7 +218,7 @@ const Contact = () => {
 								variant="contained"
 								className="formBtn"
 								sx={{ margin: "1rem 2rem 0 0" }}>
-								{t("contact.send")}
+								Send
 							</Button>
 						</form>
 					</Box>

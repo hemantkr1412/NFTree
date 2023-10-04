@@ -7,20 +7,8 @@ html {
   --primary: #08A454;
 }
 
-/* body {
-  background-color: white;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: black !important;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  z-index: -1;
-} */

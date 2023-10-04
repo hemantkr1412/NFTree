@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './Mission.css';
+import './About.css';
 
 export default function MissionCard(props) {
     useEffect(() => {

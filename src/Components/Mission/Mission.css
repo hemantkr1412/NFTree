@@ -1,120 +1,119 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#about {
+    height: 4rem !important;
 }
 
-#itservices {
-    /* background-color: red; */
-    height: 4rem;
-    margin-top: -2rem;
-}
-
-.serviceDiv {
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background: #F1F6FA; */
-    padding-top: 2rem;
-}
-
-
-
-
-
-  
-.container {
-    width: 100%;
+.imgContainer {
     display: flex;
     align-items: center;
-  }
-  
-  .box {
-    max-width: 350px;
-    width: 100%;
-    /* height: 100px; */
-    /* background-color: black; */
+}
+
+.missionImgContainer,
+.aboutImgContainer {
+    height: 20rem;
+    display: flex;
+    float: right;
+}
+
+.impactDiv {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0 20px;
-  }
-  
-  .line {
-    width: 4rem;
-    border-top: 1px dashed red;
-    margin: 0 20px;
-  }
-  
-  /* Media query for responsive layout */
-  @media (max-width: 600px) {
-    .container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .box,
-    .line {
-      margin: 10px 0;
-    }
-  }
-
+}
 
 /* MEDIA QUERY */
 
-@media only screen and (max-width : 400px) {
-    .cardContent {
-        padding: 8px !important;
+@media only screen and (max-width : 900px) {
+    .aboutBox {
+        margin-left: 2rem;
+    }
+
+    .aboutImgContainer {
+        height: 25rem;
+        margin-right: 2rem;
+    }
+
+    .missionImgContainer {
+        height: 16rem;
+        margin-left: 2rem;
+    }
+
+    .imgContainer {
+        align-items: center !important;
+    }
+
+    .missionBox {
+        margin-left: 0 !important;
+        padding: 0 1rem;
+    }
+    .impactDiv {
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 768px) {
+
+    .missionImgContainer,
+    .aboutImgContainer {
+        height: 18rem;
+    }
+
+    .imgContainer {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .aboutHead {
+        font-size: 2.4rem !important;
+    }
+
+    #aboutInfo {
+        font-size: 0.8rem !important;
     }
 }
 
 @media only screen and (max-width : 600px) {
-    .serviceCardContainerDiv {
-        padding: 0 1rem 0 2.5rem !important;
+
+    .missionImgContainer,
+    .aboutImgContainer {
+        height: 17rem;
+        width: 90%;
     }
 
-    .serviceCard {
-        padding: 0 !important;
-        padding-top: 1rem !important;
+    .aboutBox {
+        margin: 0 1rem;
     }
 
-    .serviceCardTitle {
-        font-size: 1.1rem !important;
+    .aboutHead {
+        font-size: 2.2rem !important;
     }
 
-    #itservices {
-        height: 5rem;
-    }
-}
-
-
-@media only screen and (max-width : 768px) {
-    .serviceDesc {
-        width: 90% !important;
+    .imgContainer {
+        flex-direction: column !important;
+        align-items: center;
     }
 
-    #itservices {
-        height: 5rem !important;
+    .impactDiv {
+       flex-direction: column;
+       align-items: center;
+       padding-left: 4rem !important;
     }
 }
 
-@media only screen and (min-width : 768px) and (max-width : 1200px) {
-    .serviceDesc {
-        width: 70% !important;
+@media only screen and (min-width : 900px) and (max-width : 1200px) {
+    #about {
+        height: 3rem !important;
     }
 
-    #itservices {
-        height: 5rem !important;
-    }
-}
-
-@media only screen and (min-width : 992px) and (max-width : 1200px) {
-    .serviceCardContainerDiv {
-        padding: 0 1rem 0 2.5rem !important;
+    .imgContainer {
+        align-items: center;
     }
 
-    #itservices {
-        margin-top: 0;
+    .missionBox {
+        margin-left: 0 !important;
+        padding: 3rem 0;
+    }
+
+    .aboutHead {
+        font-size: 2.3rem !important;
+        margin-bottom: 2rem !important;
     }
 }

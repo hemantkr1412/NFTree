@@ -40,13 +40,15 @@ const Join = () => {
                 justifyContent="center">
                 <Grid
                     item
-                    xs={2}
-                    sx={{ display: { xs: "none", lg: "block" } }}></Grid>
+                    xs={1}
+                    sm={2}
+                    sx={{ display: { xs: "none", md: "block" } }}></Grid>
                 <Grid
                     item
                     container
-                    xs={12}
-                    lg={8}
+                    xs={10}
+                    md={8}
+                    // lg={8}
                     spacing={3}
                     className="serviceCardContainerDiv">
                     <Typography variant="h2" gutterBottom>
@@ -63,7 +65,10 @@ const Join = () => {
                                 return (
                                     <Grid
                                         item
-                                        xs={4}>
+                                        xs={12}
+                                        sm={4}
+                                        sx={{display:'flex',justifyContent:'center' }}
+                                        >
                                         <Card sx={{ maxWidth: 345,height: '100%' }}>
                                             <CardActionArea>
                                                 <CardMedia
@@ -93,8 +98,9 @@ const Join = () => {
                 </Grid>
                 <Grid
                     item
-                    xs={2}
-                    sx={{ display: { xs: "none", lg: "block" } }}></Grid>
+                    xs={1}
+                    sm={2}
+                    sx={{ display: { xs: "none", md: "block" } }}></Grid>
             </Grid>
         </>
     );
