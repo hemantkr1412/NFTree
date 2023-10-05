@@ -1,11 +1,40 @@
-.container{
+.container {
+    width: 100%;
+    display: flex;
     align-items: center;
 }
 
-.box{
+.box {
+    max-width: 350px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
 }
-.box h1{
+
+.box h1 {
     text-align: center;
+}
+
+.downArrow{
+    display: none;
+}
+
+@media only screen and (max-width:600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        margin: 10px 0;
+    }
+    .rightArrow{
+        display: none;
+    }
+    .downArrow{
+        display: block;
+    }
 }

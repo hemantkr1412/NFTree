@@ -23,7 +23,6 @@ const Mission = () => {
 				container
 				spacing={{ xs: 3, md: 3 }}
 				justifyContent="center"
-				className="mission"
 				sx={{ mb: 5 }}>
 				<Grid item xs={12} sm={2} md={1} lg={2}
 					sx={{ display: { xs: "none", md: "block" } }}>
@@ -46,18 +45,18 @@ const Mission = () => {
 							textAlign: "center",
 							color: "black",
 						}}
-						className="aboutHead">
+						className="missionHead">
 						The Impact and Mission of NFTree
 					</Typography>
 					<Card
 						data-aos="fade-up"
-						className="aboutImgContainer">
+						className="missionImgContainer">
 						<CardMedia
 							component="img"
 							sx={{
 								objectFit: "contain",
 							}}
-							image={about} 
+							image={about}
 							alt="Image Alt Text"
 							className="aboutImg"
 
@@ -66,7 +65,7 @@ const Mission = () => {
 				</Grid>
 
 				<Grid item xs={12} sm={6} md={5} lg={4}>
-					<Box sx={{ textAlign: "start" }} className="aboutBox">
+					<Box sx={{ textAlign: "start" }} className="missionBox">
 						<Typography
 							variant="h3"
 							gutterBottom
@@ -77,7 +76,7 @@ const Mission = () => {
 								textAlign: "start",
 								color: "black",
 							}}
-							className="aboutHead">
+							className="missionHead">
 							The Impact and Mission of NFTree
 						</Typography>
 						<Typography
@@ -103,14 +102,13 @@ const Mission = () => {
 					<Card
 						sx={{ boxShadow: "none" }}
 						data-aos="fade-up"
-						className="aboutImgContainer">
+						className="missionImgContainer">
 						<CardMedia
 							component="img"
 							// height="80%"
 							image={about}
 							sx={{ objectFit: "contain" }}
 							alt="Image Alt Text"
-							className="aboutImg"
 						/>
 					</Card>
 				</Grid>

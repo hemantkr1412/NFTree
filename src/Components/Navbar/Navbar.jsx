@@ -64,7 +64,7 @@ export default function Navbar() {
 			</Typography>
 			<Divider />
 			<List>
-				{navItems.map((item,index) => (
+				{navItems.map((item, index) => (
 					<ListItem key={index} disablePadding>
 						<div
 							style={{
@@ -88,9 +88,7 @@ export default function Navbar() {
 	return (
 		<>
 			<Box sx={{ display: "flex" }}>
-				<CssBaseline sx={{
-					border:'2px solid red'
-				}}/>
+				<CssBaseline />
 				<AppBar
 					component="nav"
 					sx={{
@@ -110,7 +108,7 @@ export default function Navbar() {
 							sx={{
 								mr: 2,
 								display: { sm: "none" },
-								color: "white",
+								color: scroll ? "white" : "black"
 							}}>
 							<MenuIcon />
 						</IconButton>
@@ -155,7 +153,7 @@ export default function Navbar() {
 										justifyContent: "space-evenly",
 										alignItems: "center",
 									}}>
-									{navItems.map((item,index) => (
+									{navItems.map((item, index) => (
 										<div
 											key={index}
 											style={{
@@ -185,8 +183,6 @@ export default function Navbar() {
 						}}
 						// onClick={handleSidebarClick}
 						sx={{
-							border:'2px solid red',
-							color:'red',
 							display: { xs: "block", sm: "none" },
 							"& .MuiDrawer-paper": {
 								boxSizing: "border-box",

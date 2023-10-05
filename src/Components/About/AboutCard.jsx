@@ -15,16 +15,17 @@ export default function MissionCard(props) {
     }, [])
     return (
         <Card sx={{
-            maxWidth: 345,
+            maxWidth: '100%',
+            // border:'2px solid red',
             height: '100%',
             textAlign: 'center',
             padding: '1rem',
             boxShadow: '1px 0.2px 12px #08A454',
             borderRadius: '6px',
             margin: 'auto'
-        }} className="serviceCard" data-aos="zoom-in">
+        }} className="aboutCard" data-aos="zoom-in">
             <CardContent className='cardContent'>
-                <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px', fontWeight: 'medium' }} className="serviceCardTitle">
+                <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px', fontWeight: 'medium' }} className="aboutCardTitle">
                     {props.title}
                 </Typography>
                 <Typography
