@@ -17,7 +17,7 @@ const Mission = () => {
 	}, []);
 	return (
 		<>
-			<div id="about"></div>
+			<div id="mission"></div>
 
 			<Grid
 				container
