@@ -62,7 +62,8 @@ const Home = () => {
 							gutterBottom
 							sx={{
 								textAlign: "justify",
-								color: "white",
+								color: "black",
+								fontWeight:'600',
 								marginBottom: '2rem'
 							}}>
 							Welcome to NFTree, the platform that provides a new way to save the environment and reward investors at the same time. With our NFTokens, you can exercise your social responsibility without compromising your investment goals, and we can continue planting more trees around the globe.

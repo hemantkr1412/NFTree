@@ -33,7 +33,7 @@ const About = () => {
 							aboutCardData.map((data, id) => {
 								return (
 									<>
-										<Grid xs={6} md={4} spacing={3} sx={{
+										<Grid item xs={10} sm={4} spacing={3} sx={{
 											// border: '2px solid blue'
 										}}
 											key={id}
