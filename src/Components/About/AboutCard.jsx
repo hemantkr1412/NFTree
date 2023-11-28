@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
+import {Card,CardContent,Typography} from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './About.css';
 
 export default function MissionCard(props) {
+    const splitDesc = props.desc.split(',');
+
     useEffect(() => {
         AOS.init({
             offset: 100,
@@ -20,19 +20,19 @@ export default function MissionCard(props) {
             height: '100%',
             textAlign: 'center',
             padding: '1rem',
-            boxShadow: '1px 0.2px 12px #08A454',
+            boxShadow: '1px 0.2px 12px #aeafae',
             borderRadius: '6px',
             margin: 'auto'
         }} className="aboutCard" data-aos="zoom-in">
             <CardContent className='cardContent'>
-                <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px', fontWeight: 'medium' }} className="aboutCardTitle">
+                <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px', fontWeight: 'medium',mb:3 }} className="aboutCardTitle">
                     {props.title}
                 </Typography>
-                <Typography
-                sx={{mt: 2}}
-                 variant="body1" color="text.secondary">
-                    {props.desc}
-                </Typography>
+                <ul>
+                    {splitDesc.map((item, index) => (
+                        <li key={index} style={{textAlign:'start'}}>{item.trim()}</li>
+                    ))}
+                </ul>
             </CardContent>
         </Card >
     );

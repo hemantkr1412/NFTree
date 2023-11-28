@@ -1,8 +1,5 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import { Link } from "react-router-dom";
+import {Box,Grid,Typography} from "@mui/material";
 import homeBg from "./assets/homeBg.png"
 import "./Home.css";
 
@@ -42,12 +39,12 @@ const Home = () => {
 				>
 					<Box
 						sx={{
-							width: { xs: "90%", sm: "90%", lg: "70%" },
+							width: { xs: "90%", sm: "90%", lg: "80%" },
 							textAlign: "start",
 						}}
 						className="homeTextBox">
 						<Typography
-							variant="h1"
+							variant="h2"
 							gutterBottom
 							className="homeHead"
 							sx={{
@@ -66,16 +63,16 @@ const Home = () => {
 								fontWeight:'600',
 								marginBottom: '2rem'
 							}}>
-							Welcome to NFTree, the platform that provides a new way to save the environment and reward investors at the same time. With our NFTokens, you can exercise your social responsibility without compromising your investment goals, and we can continue planting more trees around the globe.
+							Welcome to NFTree, where digital innovation meets environmental stewardship. As you explore the platform, you'll discover a dynamic ecosystem that fosters contribution to a greener planet securely and transparently. From tree counting to carbon sequestration, NFTree provides a comprehensive, real-time view of your reforestation impact. 
 						</Typography>
 
-						<Link
+						{/* <Link
 							style={{ marginTop: '1rem' }}
 							className="exploreBtn"
 							to="https://nftree.io"
 							target="_blank">
 							Explore
-						</Link>
+						</Link> */}
 					</Box>
 				</Grid>
 				<Grid item xs={12} sm={1}

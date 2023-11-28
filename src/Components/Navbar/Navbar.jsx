@@ -132,7 +132,7 @@ export default function Navbar() {
 										src={logo}
 										alt=""
 										style={{
-											height: "4rem",
+											height: "3rem",
 											width: '100%',
 											marginTop: ".5rem",
 										}}

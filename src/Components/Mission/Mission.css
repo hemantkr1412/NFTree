@@ -110,3 +110,9 @@
         margin-bottom: 2rem !important;
     }
 }
+
+@media only screen and (max-width:600px) {
+    .howItWorksContainer .howItWorksHead {
+        font-size: 2.5rem;
+    }
+}

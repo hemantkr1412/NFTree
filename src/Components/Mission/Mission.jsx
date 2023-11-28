@@ -1,12 +1,27 @@
 import React, { useEffect } from "react";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import { Card, CardMedia } from "@mui/material";
+import { Grid, Typography, Box, Card, CardMedia } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import about from "./assets/about.png";
+import howItWorks1 from './assets/howItWorks-1.png'
+import howItWorks2 from './assets/howItWorks-2.png'
+import howItWorks3 from './assets/howItWorks-3.jpg'
 import "./Mission.css";
+
+const steps = [
+	{
+		img: howItWorks1,
+		title: "Minting NFT and Generating QR code",
+	},
+	{
+		img: howItWorks2,
+		title: "Saplings are planted against it",
+	},
+	{
+		img: howItWorks3,
+		title: "Regular monitoring and sending reports to donors",
+	},
+];
 
 const Mission = () => {
 	useEffect(() => {
@@ -15,6 +30,7 @@ const Mission = () => {
 			duration: 400,
 		});
 	}, []);
+	
 	return (
 		<>
 			<div id="mission"></div>
@@ -46,7 +62,7 @@ const Mission = () => {
 							color: "black",
 						}}
 						className="missionHead">
-						The Impact and Mission of NFTree
+						The Mission
 					</Typography>
 					<Card
 						data-aos="fade-up"
@@ -77,7 +93,7 @@ const Mission = () => {
 								color: "black",
 							}}
 							className="missionHead">
-							The Impact and Mission of NFTree
+							The Mission
 						</Typography>
 						<Typography
 							sx={{
@@ -89,7 +105,7 @@ const Mission = () => {
 							}}
 							gutterBottom
 							id="aboutInfo">
-							The mission of NFTree is to provide a sustainable solution for investors to impact the environment positively while earning income. Our goal is to create the world's largest sustainable forest using NFTokens and to be a platform that cultivates a sense of responsibility among the masses towards the environment.
+							At NFTree, we aim to pioneer a transformative intersection of technology, environmental sustainability, and community engagement and are committed to foster positive change, thus promoting a healthier planet.
 						</Typography>
 					</Box>
 				</Grid>
@@ -119,6 +135,70 @@ const Mission = () => {
 			</Grid>
 
 			<Grid
+				container
+				spacing={{ xs: 3, md: 3 }}
+			>
+				<Grid
+					item
+					xs={1}
+					sx={{ display: { xs: "none", md: "block" } }}></Grid>
+				<Grid
+					item
+					container
+					xs={10}
+					// spacing={3}
+					sx={{ mx: window.innerWidth < 900 && 'auto' }}
+					className="howItWorksContainer"
+				>
+
+					<Typography
+						variant="h2"
+						gutterBottom
+						className="howItWorksHead"
+						sx={{ margin: '5rem auto' }}>
+						How it works?
+					</Typography>
+					<Grid
+						container
+						columns={20}
+						spacing={{ xs: 3, md: 4 }}
+						className='steps'
+						sx={{
+							display: 'flex',
+							justifyContent: 'center'
+						}}
+					>
+						{
+							steps.map((step, index) => {
+								return (
+									<Grid
+										item
+										xs={12}
+										sm={10}
+										md={5}
+										sx={{ textAlign: "center" }}
+										key={index}
+									>
+										<img src={step.img} alt="" style={{
+											height: '10rem',
+											marginBottom: '10px'
+										}} />
+										<Typography variant="h1">{index + 1}</Typography>
+										<Typography variant="h5" sx={{ my: 2 }}>{step.title}</Typography>
+										<Typography variant="body1">{step.desc}</Typography>
+									</Grid>
+								)
+							})
+						}
+					</Grid>
+				</Grid>
+				<Grid
+					item
+					xs={1}
+					sx={{ display: { xs: "none", md: "block" } }}></Grid>
+			</Grid>
+
+			{/* <Grid
 				container
 				spacing={{ xs: 3, md: 3 }}
 				justifyContent="center">
@@ -167,7 +247,7 @@ const Mission = () => {
 					item
 					xs={2}
 					sx={{ display: { xs: "none", lg: "block" } }}></Grid>
-			</Grid>
+			</Grid> */}
 		</>
 	);
 };

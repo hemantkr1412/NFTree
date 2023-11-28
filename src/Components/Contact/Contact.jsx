@@ -1,18 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import FormControl from "@mui/material/FormControl";
-import Input from "@mui/material/Input";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import Button from "@mui/material/Button";
-import Select from "@mui/material/Select";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { Snackbar } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
+import React, { useState, useEffect} from "react";
+import {
+	Grid,
+	Typography,
+	Box,
+	FormControl,
+	Input,
+	InputLabel,
+	Button,
+	Snackbar,
+	IconButton
+} from "@mui/material";
 import CancelIcon from "@mui/icons-material/Cancel";
+import AOS from "aos";
 import "./Contact.css";
 
 const Contact = () => {
@@ -151,9 +150,9 @@ const Contact = () => {
 						<Box sx={{ mt: 4 }}>
 							<p>Email Address</p>
 							<a
-								href="mailto: sales@abaadalkhayal.com"
+								href="mailto: hello@beimagine.tech"
 								className="contactLink">
-								sales@beimagine.tech
+								hello@beimagine.tech
 							</a>
 						</Box>
 						<Box sx={{ mt: 4 }}>

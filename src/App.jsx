@@ -16,8 +16,8 @@ function App() {
       <Home/>
       <About/>
       <Mission />
-      <Flow/>
-      <Join/>
+      {/* <Flow/> */}
+      {/* <Join/> */}
       <Contact />
       <Footer />
     </>
