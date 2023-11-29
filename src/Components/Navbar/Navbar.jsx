@@ -144,7 +144,7 @@ export default function Navbar() {
 								xs={6}
 								sx={{
 									display: { xs: "none", sm: "block" },
-									width: { sm: "70%", md: "50%" },
+									width: { sm: "70%", md: "40%" },
 								}}>
 								<Box
 									sx={{
