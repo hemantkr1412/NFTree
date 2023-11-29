@@ -34,7 +34,9 @@ const About = () => {
 				<Grid
 					container
 					spacing={{ xs: 1, sm: 3 }}
-					justifyContent="center">
+					justifyContent="center"
+					sx={{padding:'0 1rem'}}
+					>
 					<Grid item xs={2}
 						sx={{ display: { xs: "none", lg: "block" } }}>
 					</Grid>

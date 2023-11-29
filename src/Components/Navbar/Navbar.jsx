@@ -57,7 +57,7 @@ export default function Navbar() {
 			<Typography variant="h6" sx={{ my: 2 }}>
 				<img src={logo} alt=""
 					style={{
-						height: "5rem",
+						height: "3rem",
 						marginTop: ".5rem",
 					}}
 				/>
